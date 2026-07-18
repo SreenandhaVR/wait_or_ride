@@ -6,6 +6,7 @@ import { useState } from "react";
 import { vyttilaToKakkanadRoutes } from "../../lib/mockData";
 import { scoreRoutes } from "../../lib/scoreRoutes";
 import type { Preference } from "../../lib/types";
+import { useTripStore } from "@/context/TripStore";
 import { BottomNav, Icon, PrimaryButton } from "./ui";
 
 const preferences: Array<[string, Preference]> = [
@@ -19,11 +20,13 @@ export function PlannerScreen() {
   const [destination, setDestination] = useState("");
   const [selectedPreference, setSelectedPreference] = useState<Preference>("comfortable");
   const router = useRouter();
+  const { setTripRecommendation } = useTripStore();
 
   const findBestRoute = () => {
     const result = scoreRoutes(vyttilaToKakkanadRoutes, selectedPreference);
+    setTripRecommendation(selectedPreference, result);
     console.info("Ride or Wait search preference:", selectedPreference, result.winner.mode);
-    router.push(`/recommendation?preference=${selectedPreference}`);
+    router.push("/recommendation");
   };
 
   return (
