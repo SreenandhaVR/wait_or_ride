@@ -1,2 +1,5 @@
-import { PlannerScreen } from '@/components/planner';
-export default function Page() { return <PlannerScreen />; }
+import { SplashScreen } from "@/components/splash";
+
+export default function Page() {
+  return <SplashScreen />;
+}

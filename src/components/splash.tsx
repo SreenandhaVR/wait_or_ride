@@ -46,7 +46,7 @@ export function SplashScreen() {
       </section>
 
       <Link
-        href="/"
+        href="/planner"
         className="mt-auto flex h-16 w-full items-center justify-center gap-3 rounded-[25px] bg-[#2050bb] text-[17px] font-bold text-white shadow-[0_8px_18px_rgba(0,0,0,.18)] transition hover:bg-[#2859c6]"
       >
         Get Started
