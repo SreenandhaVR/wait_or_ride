@@ -2,44 +2,56 @@
 
 import Link from "next/link";
 
+/** A location pin, clock, and forward decision in one compact mark. */
 function RideOrWaitMark() {
   return (
-    <svg width="92" height="92" viewBox="0 0 64 64" fill="none" aria-label="Ride or Wait logo">
-      <path d="M32 57s16-15.6 16-31A16 16 0 1 0 16 26c0 15.4 16 31 16 31Z" stroke="#2563EB" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M26.5 26.5h10M34 21.5l5 5-5 5" stroke="#10B981" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M27.5 38.5a5.5 5.5 0 1 0 9.7-3.55" stroke="#2563EB" strokeWidth="3" strokeLinecap="round" />
-      <path d="M32 35v3.5l2.3 1.4" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" />
+    <svg viewBox="0 0 80 100" className="h-[82px] w-[66px]" fill="none" aria-label="Ride or Wait logo" role="img">
+      <path
+        d="M40 92S10 57 10 37a30 30 0 1 1 60 0c0 20-30 55-30 55Z"
+        stroke="#3B91F5"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="40" cy="37" r="14" stroke="#3B91F5" strokeWidth="5" />
+      <path d="M40 29v9l6 4" stroke="#3B91F5" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="m61 66 10-10m0 0v8m0-8h-8" stroke="#43E8C2" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-function MetroLineIllustration() {
+function RouteLine() {
   return (
-    <svg className="w-full" viewBox="0 0 280 92" fill="none" aria-hidden="true">
-      <path d="M9 63c34-31 66-31 99 0s62 31 97 0 48-30 66-18" stroke="#BFDBFE" strokeWidth="4" strokeLinecap="round" strokeDasharray="2 10" />
-      <circle cx="49" cy="30" r="10" fill="#2563EB" />
-      <circle cx="139" cy="63" r="10" fill="#0EA5E9" />
-      <circle cx="224" cy="27" r="10" fill="#2563EB" />
-      <path d="M49 40v16m90-3v10m85-26v16" stroke="#93C5FD" strokeWidth="3" strokeLinecap="round" />
+    <svg viewBox="0 0 340 80" className="w-full" fill="none" aria-hidden="true">
+      <path d="M12 51c44 2 69-5 105-27 30-18 68-6 102 1 44 9 74 11 109 32" stroke="#3B91F5" strokeWidth="2.6" strokeLinecap="round" />
+      <circle cx="12" cy="51" r="6" fill="#C6A88A" stroke="#3B91F5" strokeWidth="3" />
+      <circle cx="117" cy="24" r="6" fill="#C6A88A" stroke="#3B91F5" strokeWidth="3" />
+      <circle cx="220" cy="24" r="6" fill="#C6A88A" stroke="#3B91F5" strokeWidth="3" />
+      <circle cx="328" cy="57" r="6" fill="#C6A88A" stroke="#3B91F5" strokeWidth="3" />
+      <circle cx="170" cy="24" r="5" fill="#43E8C2" />
     </svg>
   );
 }
 
 export function SplashScreen() {
   return (
-    <main className="app-shell flex min-h-screen flex-col items-center justify-between px-7 py-14 text-center">
-      <div className="mt-14 animate-[fade-in_.5s_ease-out]">
-        <div className="mx-auto grid h-28 w-28 place-items-center rounded-[28px] bg-blue-50">
-          <RideOrWaitMark />
-        </div>
-        <h1 className="mt-6 text-[30px] font-extrabold tracking-tight text-ink">Ride or Wait</h1>
-        <p className="mt-2 text-sm font-medium text-muted">Know Before You Board</p>
-        <div className="mx-auto mt-12 w-64"><MetroLineIllustration /></div>
-      </div>
-      <div className="w-full animate-[fade-in_.7s_ease-out]">
-        <p className="mb-5 text-sm leading-6 text-muted">A clearer choice for every commute.</p>
-        <Link href="/" className="block w-full rounded-2xl bg-brand px-5 py-4 text-sm font-bold text-white shadow-[0_5px_12px_rgba(37,99,235,.22)]">Get Started</Link>
-      </div>
+    <main className="app-shell flex min-h-dvh flex-col bg-[#181b1c] px-4 pb-[18px] pt-[195px] text-center">
+      <section className="animate-[fade-in_.5s_ease-out]">
+        <RideOrWaitMark />
+        <h1 className="mt-[39px] text-[36px] font-extrabold leading-none tracking-[-.055em] text-[#f7f3ee]">
+          Ride or Wait
+        </h1>
+        <p className="mt-4 text-[17px] font-normal tracking-[-.035em] text-[#c6a88a]">Know Before You Board</p>
+        <div className="mx-auto mt-[95px] w-full max-w-[340px]"><RouteLine /></div>
+      </section>
+
+      <Link
+        href="/"
+        className="mt-auto flex h-16 w-full items-center justify-center gap-3 rounded-[25px] bg-[#2050bb] text-[17px] font-bold text-white shadow-[0_8px_18px_rgba(0,0,0,.18)] transition hover:bg-[#2859c6]"
+      >
+        Get Started
+        <span aria-hidden="true" className="text-[31px] font-normal leading-none">→</span>
+      </Link>
     </main>
   );
 }
