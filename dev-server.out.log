@@ -55,3 +55,9 @@
  ✓ Compiled in 1074ms (535 modules)
  ✓ Compiled in 1512ms (535 modules)
  ✓ Compiled in 1236ms (535 modules)
+ GET /community 200 in 862ms
+ ○ Compiling /profile ...
+ ✓ Compiled /profile in 1580ms (268 modules)
+ ✓ Compiled in 735ms (270 modules)
+ ✓ Compiled in 544ms (270 modules)
+ ✓ Compiled in 1419ms (521 modules)
