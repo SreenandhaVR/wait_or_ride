@@ -4,3 +4,4 @@
 @tailwind utilities;
 @layer base { * { -webkit-tap-highlight-color: transparent; } body { @apply m-0 bg-slate-100 font-sans text-ink antialiased; } button { @apply transition active:scale-[.98]; } }
 @layer components { .app-shell { @apply mx-auto min-h-screen max-w-[420px] bg-white shadow-2xl; } .page { @apply min-h-screen px-5 pb-28 pt-7; } .icon { font-family: 'Material Symbols Rounded'; font-weight: normal; font-style: normal; line-height: 1; white-space: nowrap; } .label { @apply text-xs font-semibold uppercase tracking-[.12em] text-muted; } .field { @apply flex w-full items-center gap-3 rounded-2xl border border-line bg-white px-4 py-4 text-left text-sm font-medium shadow-sm; } .card { @apply rounded-2xl border border-line bg-white p-4 shadow-soft; } }
+@keyframes fade-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }

@@ -33,3 +33,9 @@
  ✓ Compiled in 627ms (520 modules)
  ✓ Compiled in 574ms (520 modules)
  ✓ Compiled in 679ms (520 modules)
+ ○ Compiling /compare ...
+ ✓ Compiled /compare in 1109ms (510 modules)
+ ✓ Compiled /journey in 482ms (514 modules)
+ ✓ Compiled /community in 410ms (517 modules)
+ ✓ Compiled in 1691ms (528 modules)
+ ✓ Compiled in 1514ms (528 modules)
