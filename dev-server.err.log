@@ -20,3 +20,5 @@
 <w>  at file dependencies C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
 <w>  at file C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
 <w>  at resolve commonjs C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
