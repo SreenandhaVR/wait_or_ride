@@ -1,0 +1,22 @@
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Managed item C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\@next\swc-win32-arm64-msvc isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Managed item C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\@next\swc-linux-x64-musl isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Managed item C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\@next\swc-linux-arm64-musl isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Managed item C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\@next\swc-linux-arm64-gnu isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Managed item C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\@next\swc-darwin-x64 isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Managed item C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\@next\swc-win32-ia32-msvc isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Managed item C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\@next\swc-linux-x64-gnu isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Managed item C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\@next\swc-darwin-arm64 isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving 'postcss/package.json' in C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\postcss\package.json', but to 'C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\node_modules\postcss\package.json' instead. Resolving dependencies are ignored for this path.
+<w>  at unknown 4 postcss/package.json
+<w>  at file dependencies C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack-config.js
+<w>  at file C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack-config.js
+<w>  at file dependencies C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving 'postcss/package.json' in C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\postcss\package.json', but to 'C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\node_modules\postcss\package.json' instead. Resolving dependencies are ignored for this path.
+<w>  at unknown 4 postcss/package.json
+<w>  at file dependencies C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack-config.js
+<w>  at file C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack-config.js
+<w>  at file dependencies C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
