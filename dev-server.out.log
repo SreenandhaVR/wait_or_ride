@@ -61,3 +61,27 @@
  ✓ Compiled in 735ms (270 modules)
  ✓ Compiled in 544ms (270 modules)
  ✓ Compiled in 1419ms (521 modules)
+ ✓ Compiled in 4s (535 modules)
+ ✓ Compiled in 560ms (270 modules)
+ ✓ Compiled in 1231ms (524 modules)
+ ✓ Compiled in 1657ms (271 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1053ms (527 modules)
+ GET /_next/static/css/app/layout.css?v=1784405178384 404 in 2861ms
+ ✓ Compiled in 2.7s (530 modules)
+ GET /_next/static/css/app/layout.css?v=1784405178384 404 in 3237ms
+ GET /_next/static/css/app/layout.css?v=1784405184881 404 in 75ms
+ GET /_next/static/css/app/layout.css?v=1784405184881 404 in 61ms
+ ✓ Compiled in 2.2s (544 modules)
+ GET /_next/static/css/app/layout.css?v=1784405189460 404 in 149ms
+ GET / 200 in 212ms
+ GET /_next/static/css/app/layout.css?v=1784405189460 404 in 172ms
+ GET /_next/static/css/app/layout.css?v=1784405189740 404 in 90ms
+ GET /_next/static/chunks/main-app.js?v=1784405189740 404 in 114ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 104ms
+ ✓ Compiled in 1323ms (527 modules)
+ ✓ Compiled in 475ms (273 modules)
+ ✓ Compiled in 1235ms (541 modules)
+ GET / 200 in 1211ms
+ ○ Compiling /compare ...
+ ✓ Compiled /compare in 797ms (270 modules)
