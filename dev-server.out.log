@@ -39,3 +39,6 @@
  ✓ Compiled /community in 410ms (517 modules)
  ✓ Compiled in 1691ms (528 modules)
  ✓ Compiled in 1514ms (528 modules)
+ GET / 200 in 320ms
+ ✓ Compiled /recommendation in 369ms (264 modules)
+ ✓ Compiled in 2.7s (531 modules)
