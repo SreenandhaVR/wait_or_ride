@@ -1,9 +1,13 @@
 "use client";
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useCrowdStore } from '@/context/CrowdStore';
 import { BottomNav, CommunityReportCard, CrowdBadge, Icon, JourneyTimeline, PrimaryButton, RecommendationCard, RouteCard, SecondaryButton } from './ui';
+import { vyttilaToKakkanadRoutes } from '../../lib/mockData';
+import { scoreRoutes } from '../../lib/scoreRoutes';
+import type { Preference } from '../../lib/types';
 
 const routes = [
   { mode: 'Metro + Shuttle', time: '52 min', crowd: 'Low' as const, comfort: 82, seat: 74, cost: '₹42', recommended: true },
@@ -12,7 +16,7 @@ const routes = [
 ];
 const Back = ({ href }: { href: string }) => <Link href={href} className="mb-6 inline-block rounded-xl p-1"><Icon>arrow_back</Icon></Link>;
 
-export function PlannerScreen() { const [destination, setDestination] = useState(''); return <main className="app-shell"><div className="page"><header className="mb-9 flex items-center justify-between">
+function LegacyPlannerScreen() { const [destination, setDestination] = useState(''); const [selectedPreference, setSelectedPreference] = useState<Preference>('comfortable'); const router = useRouter(); const findBestRoute = () => { scoreRoutes(vyttilaToKakkanadRoutes, selectedPreference); router.push('/recommendation'); }; return <main className="app-shell"><div className="page"><header className="mb-9 flex items-center justify-between">
   <div className="flex items-center gap-2">
     <div className="grid h-8 w-8 place-items-center rounded-lg bg-blue-50 text-brand"><Icon>route</Icon></div>
     <span className="text-base font-extrabold tracking-tight">Ride or Wait</span></div>

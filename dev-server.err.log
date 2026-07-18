@@ -22,3 +22,26 @@
 <w>  at resolve commonjs C:\Users\akbar\OneDrive\Desktop\wait_or_ride\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ ./src/app/page.tsx
+Attempted import error: 'PlannerScreen' is not exported from '@/components/screens' (imported as 'PlannerScreen').
+
+Import trace for requested module:
+./src/app/page.tsx
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+ ⨯ Error: Unsupported Server Component type: undefined
+    at stringify (<anonymous>)
+digest: "1364373102"
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+ ⨯ Error: Unsupported Server Component type: undefined
+    at stringify (<anonymous>)
+digest: "1181999426"
+ ⨯ Error: Unsupported Server Component type: undefined
+    at stringify (<anonymous>)
+digest: "1181999426"
+ ⚠ ./src/app/page.tsx
+Attempted import error: 'PlannerScreen' is not exported from '@/components/screens' (imported as 'PlannerScreen').
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.

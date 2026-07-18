@@ -1,2 +1,2 @@
-import { PlannerScreen } from '@/components/screens';
+import { PlannerScreen } from '@/components/planner';
 export default function Page() { return <PlannerScreen />; }
