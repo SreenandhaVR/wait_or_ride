@@ -48,3 +48,10 @@
  ✓ Compiled in 1638ms (535 modules)
  GET / 200 in 26ms
  GET / 200 in 374ms
+ ○ Compiling /recommendation ...
+ ✓ Compiled /recommendation in 687ms (268 modules)
+ ✓ Compiled in 4.4s (535 modules)
+ ✓ Compiled in 1619ms (535 modules)
+ ✓ Compiled in 1074ms (535 modules)
+ ✓ Compiled in 1512ms (535 modules)
+ ✓ Compiled in 1236ms (535 modules)

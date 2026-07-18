@@ -21,8 +21,9 @@ export function PlannerScreen() {
   const router = useRouter();
 
   const findBestRoute = () => {
-    scoreRoutes(vyttilaToKakkanadRoutes, selectedPreference);
-    router.push("/recommendation");
+    const result = scoreRoutes(vyttilaToKakkanadRoutes, selectedPreference);
+    console.info("Ride or Wait search preference:", selectedPreference, result.winner.mode);
+    router.push(`/recommendation?preference=${selectedPreference}`);
   };
 
   return (

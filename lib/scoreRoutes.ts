@@ -7,6 +7,8 @@ type Weights = {
   cost: number;
 };
 
+export type RouteScore = Route & { weightedScore: number };
+
 const weightsByPreference: Record<Preference, Weights> = {
   comfortable: { comfort: 0.55, seat: 0.35, time: 0.05, cost: 0.05 },
   fastest: { comfort: 0.1, seat: 0.05, time: 0.75, cost: 0.1 },
@@ -64,23 +66,10 @@ export function scoreRoutes(
     throw new Error("scoreRoutes requires at least one route.");
   }
 
-  const weights = weightsByPreference[preference];
-  const times = routes.map((route) => route.travelTimeMin);
-  const costs = routes.map((route) => route.costRupees);
-  const lowestTime = Math.min(...times);
-  const highestTime = Math.max(...times);
-  const lowestCost = Math.min(...costs);
-  const highestCost = Math.max(...costs);
-
-  const ranked = [...routes].sort((a, b) => {
-    const score = (route: Route) =>
-      route.comfortScore * weights.comfort +
-      route.seatChance * weights.seat +
-      normalizeLowerIsBetter(route.travelTimeMin, lowestTime, highestTime) * weights.time +
-      normalizeLowerIsBetter(route.costRupees, lowestCost, highestCost) * weights.cost;
-
-    return score(b) - score(a);
-  });
+  const scored = getRouteScores(routes, preference);
+  const ranked = [...scored]
+    .sort((a, b) => b.weightedScore - a.weightedScore)
+    .map(({ weightedScore: _weightedScore, ...route }) => route);
 
   const winner = ranked[0];
   const runnerUp = ranked[1] ?? winner;
@@ -92,4 +81,28 @@ export function scoreRoutes(
       ? `${winner.mode} is the only available route.`
       : explanationFor(winner, runnerUp, preference),
   };
+}
+
+/** Returns the deterministic component scores, useful in tests and diagnostics. */
+export function getRouteScores(routes: Route[], preference: Preference): RouteScore[] {
+  if (routes.length === 0) {
+    throw new Error("getRouteScores requires at least one route.");
+  }
+
+  const weights = weightsByPreference[preference];
+  const times = routes.map((route) => route.travelTimeMin);
+  const costs = routes.map((route) => route.costRupees);
+  const lowestTime = Math.min(...times);
+  const highestTime = Math.max(...times);
+  const lowestCost = Math.min(...costs);
+  const highestCost = Math.max(...costs);
+
+  return routes.map((route) => ({
+    ...route,
+    weightedScore:
+      route.comfortScore * weights.comfort +
+      route.seatChance * weights.seat +
+      normalizeLowerIsBetter(route.travelTimeMin, lowestTime, highestTime) * weights.time +
+      normalizeLowerIsBetter(route.costRupees, lowestCost, highestCost) * weights.cost,
+  }));
 }
